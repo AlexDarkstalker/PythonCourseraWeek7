@@ -1,0 +1,15 @@
+fin = open('input.txt', 'r', encoding='utf8')
+n, m = map(int, fin.readline().split())
+aSet = set()
+bSet = set()
+nums = list(fin.readlines())
+for i in range(n):
+    aSet.add(int(nums[i]))
+for i in range(n, n + m):
+    bSet.add(int(nums[i]))
+print(len(aSet & bSet))
+print(*sorted(list(aSet & bSet)))
+print(len(aSet - bSet))
+print(*sorted(list(aSet - bSet)))
+print(len(bSet - aSet))
+print(*sorted(list(bSet - aSet)))

@@ -1,0 +1,2 @@
+mSet = set(map(int, input().split()))
+print(len(mSet))
